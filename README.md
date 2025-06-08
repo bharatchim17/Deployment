@@ -1,2 +1,2 @@
 # Deployment
-AWS , Kubernetes ,Docker
+AWS,Kubernetes,Docker...
