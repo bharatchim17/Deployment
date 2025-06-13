@@ -1,0 +1,121 @@
+-----------------------------------------------------------------------------------
+docker run -it hello-world
+docker run -it ubuntu
+exit(ctrl + d)
+docker run -it node
+docker run -it fedora
+----------------------------------------------------
+//To download an image from remote repository:
+docker image pull python
+//To see the history of an image:
+docker image history python
+docker image history --no-trunc python
+//To show more detailed information about an image...
+docker image inspect python
+//To get list of all local images, we can use the command:
+docker image ls / docker images
+docker container run -it python
+docker create -it python
+docker start -i 66aa
+------------------------------------------------------------
+pwd  ---> print working directory..
+cd folderName ---> Change directory
+cd ..  ---> Change directory to parent directory
+ls ---> list contents of directory
+ls -a ---> list all file (including hiden file)
+mkdir ---> make directory(folder)
+rm ---> remove folders/files
+rm -R ---> recursively delete
+cat ---> output text file to the shell
+touch ---> create new file
+cls ---> clear current view
+exit or ctrl + d/c ---> To exit
+apt update ---> update package defination
+apt install ---> install programme
+---------------------------------------------------------------------
+//Ip address: refers to specific device in network..
+IPV4: 4x decimal numbers..
+IPV6: 8x hexadecimal numbers..
+Port: refers to process on device in network..
+Most protocols have default ports:
+Port: 80 HTTP
+Port: 443 HTTPS
+Port: 22 SSH
+127.0.0.1 ---> localhost
+--------------------------------------------------------------------------------
+//What is webserver..?
+A web server:
+- A software or hardware system that delivers web content to users over the internet..
+key functions:
+- handle HTTP requests and send back responses..
+---------------------------------------------------------------
+docker run -it nginx
+Nginx is configured to always listen to port 80
+docker run -d -p 8888:80 nginx
+docker ps / docker container ls
+docker logs containerId
+docker container inspect 1a6
+docker container ls -a -s <--- shows the sizes of all containers, including those that are not running..
+docker run --name my-server nginx
+docker container rename my-server new-server <--- my-server is oldName
+-------------------------------------------------------------
+docker start containerId
+docker stop containerId
+docker rm  containerId
+docker container rm containerId
+//We can even use shell expansion to delete all inactive containers:
+docker ps -aq  <--- means all quite
+echo $(docker ps -aq)
+docker rm $(docker container ls -aq)  <--- to remove all exited container
+------------------------------------------------------------------------------------------
+//Delete containers automatically:
+docker run -it --rm ubuntu <---  --rm will remove container automatically..
+---------------------------------------------------------------------------------------------
+docker run -it --rm python bash
+pip install numpy
+python
+import numpy as np
+a = np.array([1,2,3])
+print(a * 3)
+------------------------------------------------------------
+What will happen if you run the following Docker command..? docker run nginx ls
+Running the command docker run nginx ls will start a temporary NGINX container and execute the ls command inside it. 
+Instead of starting the NGINX server, the container will list the contents of the root directory inside the container, 
+then immediately stop...
+This happens because when you pass ls as an argument to docker run, Docker overrides the default command of the NGINX 
+image (nginx -g 'daemon off;'). Instead of launching the NGINX server, the container runs ls and exits once the command 
+completes...
+---------------------------------------------------------------------------------------------
+//Launch programs in running containers:
+docker run -it --rm --name my-python python
+docker container exec -it my-python bash
+pip install numpy
+docker container exec my-python pip install pandas
+docker container exec -it containerId bash
+----------------------------------------------------------------------------------------
+docker container create -it ubuntu
+docker container start -i containerId
+--------------------------------------------------------
+docker run -it --rm ubuntu
+docker container exec -it ubuntu bash
+apt update
+apt install nano
+-----------------------------------------------------------------
+docker run -it --rm -p 8888:80 nginx
+docker container exec -it containerId bash
+ls
+cd usr
+ls
+cd nginx
+ls
+html
+ls
+apt update
+apt install nano
+nano index.html
+-------------------------------------------------------------------
+//nano command:
+ctrl + 0 and then enter to save
+ctrl + k for cut
+ctrl + x to exit
+-------------------------------------------------------

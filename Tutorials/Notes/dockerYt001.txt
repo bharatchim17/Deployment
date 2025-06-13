@@ -1,0 +1,12 @@
+-------------------------------------------------------
+docker ps
+whoami
+docker run -d -e MYSQL_ROOT_PASSWORD=root mysql 
+docker stop containerId
+ls
+rm -v fileName
+vim dockerfile
+------------------------------------------------------
+
+
+44:36

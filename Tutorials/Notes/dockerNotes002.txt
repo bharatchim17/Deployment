@@ -1,0 +1,32 @@
+---------------------------------------------------------------------------
+//What is AWS(Amezon Web Services)..?
+- Cloud computing platform from amazon..
+- Offers over 200 services for computing and serverless computing...
+- Offers storage , long-term storage..
+- Offers various databases , caches..
+The access to AWS services is managed by IAM(Identity and Access Management)...
+--------------------------------------------------------
+//What is EC2(Elastic Computing Cloud)..?
+We can use it to create and manage virtual servers(instances) in cloud..
+In EC2 various configurations for CPU , memory and storage availble also, we can choose which operating
+system should be installed... 
+-------------------------------------------------------------------------------------
+//Server on Amazon AWS:
+Is real server in cloud accessible from internet...
+
+//Raspberry Pi:
+Is small computer based on the ARM CPU architecuture , that runs Linux...
+Perfect for small projects or home automation..
+Disadvantages: Not fast as normal computer also , it have some additional cost..
+
+//Virtual Machine:
+It's software that we can install on our computer...
+It will then provide virtual computer to our Linux system...
+Advantage: No additional costs , you can test Linux system quite easily..
+---------------------------------------------------------- ----
+//What is SSH..?
+Secure Shell: a cryptographic network protocol..
+Encrypts all data transmitted between the client and server, ensuring
+confidentiality and integrity...
+The most common use case for ssh is to securely access and manage remote through terminal..
+-----------------------------------------------------------------
